@@ -15,25 +15,27 @@ body {
     left: 0;
     top: 0;
     width: 280px;
-    /* height: 100vh; */
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
-
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     padding: 20px;
     margin: 20px 0;
     transition: all 0.3s ease;
-
+    height: calc(100vh - 40px);
 }
 
 .menu ul {
     list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.menu ul li {
-    margin: 15px 0;
+.menu ul li:not(.logout):not(.profile) {
+    margin: 8px 0;
 }
 
 .menu ul li a {
@@ -48,7 +50,6 @@ body {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(141, 77, 77, 0.146);
     backdrop-filter: blur(5px);
-
 }
 
 .menu ul li a:hover ,
@@ -59,8 +60,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-
-
 .menu ul li a i {
     min-width: 30px;
     font-size: 20px;
@@ -69,20 +68,21 @@ body {
 }
 
 .profile {
-    text-align: center;
-    padding-bottom: 30px;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    cursor: url(../assets/images/wand.png), auto;
     border-bottom: 1px solid rgba(255, 255, 255, 0.172);
 }
 
 .profile .img-box {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 10px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid rgba(245, 245, 182, 0.597);
-    cursor: url(../assets/images/wand.png) ,auto;
+    border: 2px solid rgba(245, 245, 182, 0.597);
+    margin-right: 15px;
 }
 
 .profile img {
@@ -94,13 +94,14 @@ body {
 
 .profile h2 {
     color: #fff;
-    font-size: 20px;
-    margin-top: 5px;
+    font-size: 16px;
     font-weight: 500;
 }
 
-.menu ul li.logout {
+.menu ul .logout {
     margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.172);
 }
 
 .menu ul li.logout a {
@@ -111,6 +112,7 @@ body {
 .menu ul li.logout a:hover {
     background: rgba(255, 0, 0, 0.2);
     border: 1px solid rgba(255, 0, 0, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.579);
 }
 
 .menu ul li.logout a i {
