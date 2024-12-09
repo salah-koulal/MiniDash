@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(../assets/images/wallhaven-zyj28v_2880x1800.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    /* height: 100vh; */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 20px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(141, 77, 77, 0.146);
+    backdrop-filter: blur(5px);
+
+}
+
+.menu ul li a:hover ,
+.menu ul li a.active {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.579);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+
+.menu ul li a i {
+    min-width: 30px;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #4a9eff;
+}
+
+.profile {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.172);
+}
+
+.profile .img-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(245, 245, 182, 0.597);
+    cursor: url(../assets/images/wand.png) ,auto;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile h2 {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.menu ul li.logout {
+    margin-top: auto;
+}
+
+.menu ul li.logout a {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.menu ul li.logout a:hover {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.menu ul li.logout a i {
+    color: #ff4444;
+}
